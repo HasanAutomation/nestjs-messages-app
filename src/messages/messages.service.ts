@@ -9,7 +9,7 @@ export class MessagesService {
   }
 
   findOne(id: string) {
-    this.messageRepo.findOne(id);
+    return this.messageRepo.findOne(id);
   }
 
   findAll() {
