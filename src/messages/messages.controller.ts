@@ -5,10 +5,8 @@ import { Body, Controller, Get, NotFoundException, Param, Post } from '@nestjs/c
 @Controller('messages')
 export class MessagesController {
 
-  messagesService: MessagesService
+  constructor(public messagesService: MessagesService) {
 
-  constructor() {
-    this.messagesService = new MessagesService();
   }
 
   @Get()
